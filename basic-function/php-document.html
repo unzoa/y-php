@@ -1,0 +1,28 @@
+<div style="width: 50%;margin:0 auto;background-color: #999ccc;padding:10px 15px">
+	<h2>1,打开非持久的 MySQL 连接</h2>	
+	<p>
+	$con = mysql_connect('localhost', 'root', '');
+	if (!$con){
+		die('Could not connect: ' . mysql_error());
+	}
+	</p>
+	<p><font color="red">mysql_connenct</font></p>
+
+	<h2>2,连接MySQL错误</h2>
+	<p><font color="red">mysql_error</font></p>
+
+	<h2>3,连接数据库</h2>
+	<p><font color="red">mysql_select_db("my_db", $con);</font></p>
+
+	<h2>4,sql语句配合查询数据库</h2>
+	<p>$sql="SELECT * FROM user WHERE id = '".$q."'";<br/>
+	$result = mysql_query($sql);</p>
+	<p><font color="red">mysql_query</font></p>
+
+	<h2>5,遍历查询语句</h2>
+	<p>while($row = mysql_fetch_array($result))</p>
+	<p><font color="red">mysql_fetch_array</font></p>
+
+	<h2>6,关闭非持久的 MySQL 连接</h2>
+	<p><font color="red">mysql_close</font></p>
+</div>
